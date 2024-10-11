@@ -1,0 +1,34 @@
+# flake8: noqa
+
+# import apis into api package
+from openapi_client.api.bookings_api import BookingsApi
+from openapi_client.api.calendars_api import CalendarsApi
+from openapi_client.api.destination_calendars_api import DestinationCalendarsApi
+from openapi_client.api.event_types_api import EventTypesApi
+from openapi_client.api.event_types_webhooks_api import EventTypesWebhooksApi
+from openapi_client.api.managed_users_api import ManagedUsersApi
+from openapi_client.api.me_api import MeApi
+from openapi_client.api.o_auth_api import OAuthApi
+from openapi_client.api.orgs_attributes_api import OrgsAttributesApi
+from openapi_client.api.orgs_attributes_options_api import OrgsAttributesOptionsApi
+from openapi_client.api.orgs_event_types_api import OrgsEventTypesApi
+from openapi_client.api.orgs_memberships_api import OrgsMembershipsApi
+from openapi_client.api.orgs_schedules_api import OrgsSchedulesApi
+from openapi_client.api.orgs_teams_api import OrgsTeamsApi
+from openapi_client.api.orgs_teams_memberships_api import OrgsTeamsMembershipsApi
+from openapi_client.api.orgs_users_api import OrgsUsersApi
+from openapi_client.api.orgs_users_schedules_api import OrgsUsersSchedulesApi
+from openapi_client.api.orgs_webhooks_api import OrgsWebhooksApi
+from openapi_client.api.platform_cal_provider_api import PlatformCalProviderApi
+from openapi_client.api.platform_conferencing_api import PlatformConferencingApi
+from openapi_client.api.platform_google_calendar_api import PlatformGoogleCalendarApi
+from openapi_client.api.platform_managed_users_api import PlatformManagedUsersApi
+from openapi_client.api.platform_webhooks_api import PlatformWebhooksApi
+from openapi_client.api.schedules_api import SchedulesApi
+from openapi_client.api.selected_calendars_api import SelectedCalendarsApi
+from openapi_client.api.slots_api import SlotsApi
+from openapi_client.api.stripe_api import StripeApi
+from openapi_client.api.teams_api import TeamsApi
+from openapi_client.api.timezones_api import TimezonesApi
+from openapi_client.api.webhooks_api import WebhooksApi
+

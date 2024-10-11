@@ -1,0 +1,353 @@
+# openapi_client.OrgsWebhooksApi
+
+All URIs are relative to *http://localhost*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**organizations_webhooks_controller_create_organization_webhook**](OrgsWebhooksApi.md#organizations_webhooks_controller_create_organization_webhook) | **POST** /v2/organizations/{orgId}/webhooks | Create a webhook
+[**organizations_webhooks_controller_delete_webhook**](OrgsWebhooksApi.md#organizations_webhooks_controller_delete_webhook) | **DELETE** /v2/organizations/{orgId}/webhooks/{webhookId} | Delete a webhook
+[**organizations_webhooks_controller_get_all_organization_webhooks**](OrgsWebhooksApi.md#organizations_webhooks_controller_get_all_organization_webhooks) | **GET** /v2/organizations/{orgId}/webhooks | Get all webhooks
+[**organizations_webhooks_controller_get_organization_webhook**](OrgsWebhooksApi.md#organizations_webhooks_controller_get_organization_webhook) | **GET** /v2/organizations/{orgId}/webhooks/{webhookId} | Get a webhook
+[**organizations_webhooks_controller_update_org_webhook**](OrgsWebhooksApi.md#organizations_webhooks_controller_update_org_webhook) | **PATCH** /v2/organizations/{orgId}/webhooks/{webhookId} | Update a webhook
+
+
+# **organizations_webhooks_controller_create_organization_webhook**
+> TeamWebhookOutputResponseDto organizations_webhooks_controller_create_organization_webhook(org_id, create_webhook_input_dto)
+
+Create a webhook
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.models.create_webhook_input_dto import CreateWebhookInputDto
+from openapi_client.models.team_webhook_output_response_dto import TeamWebhookOutputResponseDto
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.OrgsWebhooksApi(api_client)
+    org_id = 3.4 # float | 
+    create_webhook_input_dto = openapi_client.CreateWebhookInputDto() # CreateWebhookInputDto | 
+
+    try:
+        # Create a webhook
+        api_response = api_instance.organizations_webhooks_controller_create_organization_webhook(org_id, create_webhook_input_dto)
+        print("The response of OrgsWebhooksApi->organizations_webhooks_controller_create_organization_webhook:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrgsWebhooksApi->organizations_webhooks_controller_create_organization_webhook: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **org_id** | **float**|  | 
+ **create_webhook_input_dto** | [**CreateWebhookInputDto**](CreateWebhookInputDto.md)|  | 
+
+### Return type
+
+[**TeamWebhookOutputResponseDto**](TeamWebhookOutputResponseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**201** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **organizations_webhooks_controller_delete_webhook**
+> TeamWebhookOutputResponseDto organizations_webhooks_controller_delete_webhook(webhook_id)
+
+Delete a webhook
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.models.team_webhook_output_response_dto import TeamWebhookOutputResponseDto
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.OrgsWebhooksApi(api_client)
+    webhook_id = 'webhook_id_example' # str | 
+
+    try:
+        # Delete a webhook
+        api_response = api_instance.organizations_webhooks_controller_delete_webhook(webhook_id)
+        print("The response of OrgsWebhooksApi->organizations_webhooks_controller_delete_webhook:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrgsWebhooksApi->organizations_webhooks_controller_delete_webhook: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhook_id** | **str**|  | 
+
+### Return type
+
+[**TeamWebhookOutputResponseDto**](TeamWebhookOutputResponseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **organizations_webhooks_controller_get_all_organization_webhooks**
+> TeamWebhooksOutputResponseDto organizations_webhooks_controller_get_all_organization_webhooks(org_id, take=take, skip=skip)
+
+Get all webhooks
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.models.team_webhooks_output_response_dto import TeamWebhooksOutputResponseDto
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.OrgsWebhooksApi(api_client)
+    org_id = 3.4 # float | 
+    take = 10 # float | The number of items to return (optional)
+    skip = 0 # float | The number of items to skip (optional)
+
+    try:
+        # Get all webhooks
+        api_response = api_instance.organizations_webhooks_controller_get_all_organization_webhooks(org_id, take=take, skip=skip)
+        print("The response of OrgsWebhooksApi->organizations_webhooks_controller_get_all_organization_webhooks:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrgsWebhooksApi->organizations_webhooks_controller_get_all_organization_webhooks: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **org_id** | **float**|  | 
+ **take** | **float**| The number of items to return | [optional] 
+ **skip** | **float**| The number of items to skip | [optional] 
+
+### Return type
+
+[**TeamWebhooksOutputResponseDto**](TeamWebhooksOutputResponseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **organizations_webhooks_controller_get_organization_webhook**
+> TeamWebhookOutputResponseDto organizations_webhooks_controller_get_organization_webhook(webhook_id)
+
+Get a webhook
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.models.team_webhook_output_response_dto import TeamWebhookOutputResponseDto
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.OrgsWebhooksApi(api_client)
+    webhook_id = 'webhook_id_example' # str | 
+
+    try:
+        # Get a webhook
+        api_response = api_instance.organizations_webhooks_controller_get_organization_webhook(webhook_id)
+        print("The response of OrgsWebhooksApi->organizations_webhooks_controller_get_organization_webhook:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrgsWebhooksApi->organizations_webhooks_controller_get_organization_webhook: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhook_id** | **str**|  | 
+
+### Return type
+
+[**TeamWebhookOutputResponseDto**](TeamWebhookOutputResponseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **organizations_webhooks_controller_update_org_webhook**
+> TeamWebhookOutputResponseDto organizations_webhooks_controller_update_org_webhook(webhook_id, update_webhook_input_dto)
+
+Update a webhook
+
+### Example
+
+
+```python
+import openapi_client
+from openapi_client.models.team_webhook_output_response_dto import TeamWebhookOutputResponseDto
+from openapi_client.models.update_webhook_input_dto import UpdateWebhookInputDto
+from openapi_client.rest import ApiException
+from pprint import pprint
+
+# Defining the host is optional and defaults to http://localhost
+# See configuration.py for a list of all supported configuration parameters.
+configuration = openapi_client.Configuration(
+    host = "http://localhost"
+)
+
+
+# Enter a context with an instance of the API client
+with openapi_client.ApiClient(configuration) as api_client:
+    # Create an instance of the API class
+    api_instance = openapi_client.OrgsWebhooksApi(api_client)
+    webhook_id = 'webhook_id_example' # str | 
+    update_webhook_input_dto = openapi_client.UpdateWebhookInputDto() # UpdateWebhookInputDto | 
+
+    try:
+        # Update a webhook
+        api_response = api_instance.organizations_webhooks_controller_update_org_webhook(webhook_id, update_webhook_input_dto)
+        print("The response of OrgsWebhooksApi->organizations_webhooks_controller_update_org_webhook:\n")
+        pprint(api_response)
+    except Exception as e:
+        print("Exception when calling OrgsWebhooksApi->organizations_webhooks_controller_update_org_webhook: %s\n" % e)
+```
+
+
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **webhook_id** | **str**|  | 
+ **update_webhook_input_dto** | [**UpdateWebhookInputDto**](UpdateWebhookInputDto.md)|  | 
+
+### Return type
+
+[**TeamWebhookOutputResponseDto**](TeamWebhookOutputResponseDto.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+### HTTP response details
+
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+**200** |  |  -  |
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

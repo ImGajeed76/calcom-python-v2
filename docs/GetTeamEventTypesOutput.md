@@ -1,0 +1,30 @@
+# GetTeamEventTypesOutput
+
+
+## Properties
+
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**status** | **str** |  | 
+**data** | [**List[TeamEventTypeOutput20240614]**](TeamEventTypeOutput20240614.md) |  | 
+
+## Example
+
+```python
+from openapi_client.models.get_team_event_types_output import GetTeamEventTypesOutput
+
+# TODO update the JSON string below
+json = "{}"
+# create an instance of GetTeamEventTypesOutput from a JSON string
+get_team_event_types_output_instance = GetTeamEventTypesOutput.from_json(json)
+# print the JSON string representation of the object
+print(GetTeamEventTypesOutput.to_json())
+
+# convert the object into a dict
+get_team_event_types_output_dict = get_team_event_types_output_instance.to_dict()
+# create an instance of GetTeamEventTypesOutput from a dict
+get_team_event_types_output_from_dict = GetTeamEventTypesOutput.from_dict(get_team_event_types_output_dict)
+```
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
+
+
