@@ -33,7 +33,7 @@ from openapi_client.models.boolean_field_input20240614 import BooleanFieldInput2
 from openapi_client.models.boolean_field_output20240614 import BooleanFieldOutput20240614
 from openapi_client.models.business_days_window20240614 import BusinessDaysWindow20240614
 from openapi_client.models.busy_times_output import BusyTimesOutput
-from openapi_client.models.calendar import Calendar
+from openapi_client.models.cal_calendar import Calendar
 from openapi_client.models.calendar_days_window20240614 import CalendarDaysWindow20240614
 from openapi_client.models.cancel_booking_input20240813 import CancelBookingInput20240813
 from openapi_client.models.cancel_booking_output20240813 import CancelBookingOutput20240813

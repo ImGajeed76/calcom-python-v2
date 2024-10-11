@@ -14,7 +14,7 @@
 
 import unittest
 
-from openapi_client.models.calendar import Calendar
+from openapi_client.models.cal_calendar import Calendar
 
 class TestCalendar(unittest.TestCase):
     """Calendar unit test stubs"""

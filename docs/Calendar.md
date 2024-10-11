@@ -17,7 +17,7 @@ Name | Type | Description | Notes
 ## Example
 
 ```python
-from openapi_client.models.calendar import Calendar
+from openapi_client.models.cal_calendar import Calendar
 
 # TODO update the JSON string below
 json = "{}"

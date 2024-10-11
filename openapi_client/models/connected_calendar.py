@@ -19,7 +19,7 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
 from typing import Any, ClassVar, Dict, List, Optional, Union
-from openapi_client.models.calendar import Calendar
+from openapi_client.models.cal_calendar import Calendar
 from openapi_client.models.integration import Integration
 from openapi_client.models.primary import Primary
 from typing import Optional, Set
