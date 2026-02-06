@@ -466,6 +466,7 @@ Endpoints do not require authorization.
 
 ## Author
 
+[Oliver Seifert](https://oseifert.ch) ([@ImGajeed76](https://github.com/ImGajeed76))
 
 
 
